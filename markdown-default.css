@@ -1,0 +1,209 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,600,300italic,600italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200);
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);*/
+
+*{
+  margin:0;
+  padding:0;
+  /*-webkit-font-smoothing: antialiased;*/
+}
+
+html. body{
+   overflow-x: hidden;
+}
+
+body{
+  font-family:'Josefin Slab', serif;
+  font-weight:100;
+  font-size:18pt;
+  line-height:24pt;
+  background:#131313;
+  color:#AAA;
+
+}
+::selection{
+  background:#AA0;
+  color:#FFF;
+}
+article{
+  width:46.5ch;
+  margin:0 auto;
+}
+p{
+  margin:0 0 3ch;
+}
+em{
+}
+ul, ol{
+  padding-left: 3ch;
+}
+article>ul, article>ol{
+  margin-bottom: 2ch;
+}
+
+
+
+h1,h2,h3,h4,h5,h6{
+  font-family:'Josefin Slab', serif;
+  font-weight: 100;
+  color:#fff;
+  margin-top:3ch;
+  margin-bottom:2ch;
+}
+
+h1{
+  font-size:36pt;
+  background-color: #0A0A0A;
+  position: relative;
+  padding:2ch 1ch 1ch 0;
+  margin-top: 0ch;
+}
+h1:before, h1:after {
+  content: "";
+  position: absolute;
+  background: #0A0A0A;
+  top: 0;
+  bottom: 0;
+  width: 9999px;
+} 
+h1:before {
+  right: 100%; 
+}
+h1:after {
+  left: 100%;
+}
+
+
+
+h1+p{
+  /*padding:0 2ch;*/
+}
+
+
+
+
+
+
+
+
+
+
+h2{font-size:28pt;font-weight:bold;}
+h3{font-size:24pt;font-weight:bold;}
+h4{font-size:20pt;font-weight:bold;}
+h5{font-size:18pt;font-weight:bold;}
+h6{font-size:14pt;font-weight:bold;}
+
+
+a{
+  color:#bbbb77;
+  background:#101010;
+  /*background:rgba(0,0,0,.25);*/
+  word-break: break-all;
+}
+
+a:visited{
+  color:#bbbb77;
+}
+
+a:hover,a:focus{
+  color:#AA0;
+  background:#111;
+}
+
+
+
+
+pre{
+  font-family: 'Source Code Pro';
+  font-weight: normal!important;
+  font-size: 12pt;
+  line-height: 18pt;
+  padding:1ch 2ch;
+  letter-spacing: -.1ch;
+  color:#DDD!important;
+  /*background:#212121!important;*/
+  /*background:#191919!important;  */
+  background:transparent!important;
+  margin-bottom: 6ch;
+}
+/*article>h2+p{*/
+
+pre{
+  background-color: #171717!important;
+  background: #171717!important;
+  position: relative;
+}
+
+pre:before, pre:after {
+  content: "";
+  position: absolute;
+  background: #171717;
+  background-color: #171717;
+  top: 0;
+  bottom: 0;
+  width: 9999px;
+} 
+pre:before {
+  right: 100%; 
+}
+pre:after {
+  left: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+article>*:not(div):hover{background-color: #171717;background: #171717;position: relative;}
+article>*:not(div):hover:before,
+article>*:not(div):hover:after {content: "";position: absolute;background-color: #171717;background: #171717;top: 0;bottom: 0;width: 9999px;} 
+article>*:not(div):hover:before{right: 100%;}
+article>*:not(div):hover:after{left: 100%;}
+
+
+
+
+pre:hover{
+  background-color: #222!important;
+  background: #222!important;
+  /*transition:.25s;*/
+}
+pre:hover:before, pre:hover:after {
+  content: "";
+  position: absolute;
+  background-color:  #222!important;
+  background: #222!important;
+  top: 0;
+  bottom: 0;
+  width: 9999px;
+  /*transition:.25s;*/
+} 
+pre:hover:before {
+  background: #222!important;
+  right: 100%; 
+  /*transition:.25s;*/
+}
+pre:hover:after {
+  background: #222!important;
+  left: 100%;
+  /*transition:.25s;*/
+}
+
+
+
+
+
+
+blockquote{
+  font-weight:300;
+  color:#666;
+  border-left: 1ch #555 solid;
+  padding-left:1ch;
+  margin-bottom: 2ch;
+}
