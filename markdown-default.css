@@ -1,6 +1,11 @@
+/* FONT IMPORTS */
+
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,600,300italic,600italic);
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300,600);
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);*/
+
+
+/* MAIN PAGE STYLES */
 
 *{
   margin:0;
@@ -32,6 +37,10 @@ article{
 p{
   margin:0 0 3ch;
 }
+
+
+/* LISTS */
+
 em{
 }
 ul, ol{
@@ -43,17 +52,20 @@ article>ul, article>ol{
 
 
 
+/* HEADINGS */
+
+
 h1,h2,h3,h4,h5,h6{
   font-family:'Josefin Slab', serif;
   font-weight: 100;
-  color:#fff;
+  color:#BBB;
   margin-top:3ch;
   margin-bottom:2ch;
 }
 
 h1{
   font-size:36pt;
-  background-color: #0A0A0A;
+  background-color: #000;
   position: relative;
   padding:2ch 1ch 1ch 0;
   margin-top: 0ch;
@@ -61,7 +73,7 @@ h1{
 h1:before, h1:after {
   content: "";
   position: absolute;
-  background: #0A0A0A;
+  background: #000;
   top: 0;
   bottom: 0;
   width: 9999px;
@@ -74,19 +86,9 @@ h1:after {
 }
 
 
-
 h1+p{
   /*padding:0 2ch;*/
 }
-
-
-
-
-
-
-
-
-
 
 h2{font-size:28pt;font-weight:bold;}
 h3{font-size:24pt;font-weight:bold;}
@@ -95,10 +97,13 @@ h5{font-size:18pt;font-weight:bold;}
 h6{font-size:14pt;font-weight:bold;}
 
 
+
+/* LINKS */
+
 a{
   color:#bbbb77;
-  background:#101010;
-  /*background:rgba(0,0,0,.25);*/
+  /*background:#101010;*/
+  background:#000;
   word-break: break-all;
 }
 
@@ -107,103 +112,169 @@ a:visited{
 }
 
 a:hover,a:focus{
-  color:#AA0;
-  background:#111;
+  /*color:#AA0;*/
+  /*background:#111;*/
 }
 
 
 
+/*article>h2+p{*/
+
+
+
+
+
+
+
+
+/* HOVER ALL: Screen-Wide Background */
+
+/*article>*:not(div):not(table):hover{background-color: #222;background: #222;position: relative;}
+article>*:not(div):not(table):hover:before,
+article>*:not(div):not(table):hover:after {content: "";position: absolute;background-color: #222;background: #222;top: 0;bottom: 0;width: 9999px;} 
+article>*:not(div):not(table):hover:before{right: 100%;}
+article>*:not(div):not(table):hover:after{left: 100%;}
+*/
+
+
+
+/* PRE */
 
 pre{
   font-family: 'Source Code Pro';
   font-weight: normal!important;
-  font-size: 12pt;
+  font-size: 14pt;
   line-height: 18pt;
   padding:1ch 2ch;
-  letter-spacing: -.1ch;
-  color:#DDD!important;
-  /*background:#212121!important;*/
-  /*background:#191919!important;  */
-  background:transparent!important;
+  color:#AAA!important;
   margin-bottom: 6ch;
-}
-/*article>h2+p{*/
-
-pre{
-  background-color: #171717!important;
-  background: #171717!important;
+  background-color: #0A0A0A!important;
+  background: #0A0A0A!important;
   position: relative;
 }
 
-pre:before, pre:after {
-  content: "";
-  position: absolute;
-  background: #171717;
-  background-color: #171717;
-  top: 0;
-  bottom: 0;
-  width: 9999px;
-} 
-pre:before {
-  right: 100%; 
-}
-pre:after {
-  left: 100%;
-}
+    /* PRE: Screen-Wide Background */
+    pre:before,
+    pre:after {background: #0A0A0A;background-color: #0A0A0A;content: "";position: absolute;top: 0;bottom: 0;width: 9999px;}
+    pre:before {right: 100%;}
+    pre:after {left: 100%;}
+
+
+
+    /* PRE: Screen-Wide Background Hover */
+    /*pre:hover{
+      background-color: #222!important;
+      background: #222!important;
+    }
+    pre:hover:before,
+    pre:hover:after {
+      content: "";
+      position: absolute;
+      background-color:  #222!important;
+      background: #222!important;
+      top: 0;
+      bottom: 0;
+      width: 9999px;
+    } 
+    pre:hover:before {
+      background: #222!important;
+      right: 100%; 
+    }
+    pre:hover:after {
+      background: #222!important;
+      left: 100%;
+    }*/
 
 
 
 
 
 
-
-
-
-
-article>*:not(div):hover{background-color: #191919;background: #191919;position: relative;}
-article>*:not(div):hover:before,
-article>*:not(div):hover:after {content: "";position: absolute;background-color: #191919;background: #171717;top: 0;bottom: 0;width: 9999px;} 
-article>*:not(div):hover:before{right: 100%;}
-article>*:not(div):hover:after{left: 100%;}
-
-
-
-
-pre:hover{
-  background-color: #191919!important;
-  background: #191919!important;
-  /*transition:.25s;*/
-}
-pre:hover:before, pre:hover:after {
-  content: "";
-  position: absolute;
-  background-color:  #191919!important;
-  background: #191919!important;
-  top: 0;
-  bottom: 0;
-  width: 9999px;
-  /*transition:.25s;*/
-} 
-pre:hover:before {
-  background: #191919!important;
-  right: 100%; 
-  /*transition:.25s;*/
-}
-pre:hover:after {
-  background: #191919!important;
-  left: 100%;
-  /*transition:.25s;*/
-}
-
-
-
-
-
+/* BLOCKQUOTE */
 
 blockquote{
   font-weight:300;
-  color:#666;
-  border-left: 1ch #555 solid;
+  color:#AAA;
+  border-left: 1ch #777 solid;
   padding-left:1ch;
   margin-bottom: 2ch;
+  background: #0A0A0A!important;
 }
+
+blockquote:hover{
+  /*background-color: #0A0A0A!important;*/
+  /*background: #0A0A0A!important;*/
+  /*border-left: 1ch #555 solid;*/
+}
+
+
+
+
+/* TABLE */
+
+article>table{
+  margin-bottom:5ch;
+}
+
+table{
+  border-collapse: collapse;
+  color:#aaa;
+}
+th{
+  padding:0ch 2ch;
+  background:#888;
+  color:#000;
+  font-weight: bold;
+}
+td{
+  padding:0ch 2ch;
+  border:2px solid #131313;
+}
+tr:nth-child(odd){background:#222;}
+tr:nth-child(even){background:#2A2A2A;}
+tr:nth-child(odd):hover{background:#333;}
+tr:nth-child(even):hover{background:#3A3A3A;}
+
+    /* PRE: Screen-Wide Background */
+    table:before,
+    table:after {background: #000; background-color: #000;content: "";position: absolute;top: 0;bottom: 0;width: 9999px;} 
+    table:before {right: 100%;}
+    table:after {left: 100%;}
+
+
+
+
+
+
+/* MATHJAX */
+
+
+span.MathJax{
+  font-size:350%!important; 
+  padding:1ch;
+  /*background:#191919!important;*/
+}
+/*span.MathJax:hover{
+  background-color: #222!important;
+  background: #222!important;
+}
+span.MathJax:hover:before,
+span.MathJax:hover:after {
+  content: "";
+  position: absolute;
+  background-color:  #222!important;
+  background: #222!important;
+  top: 0;
+  bottom: 0;
+  width: 9999px;
+} 
+span.MathJax:hover:before {
+  background: #222!important;
+  right: 100%; 
+}
+span.MathJax:hover:after {
+  background: #222!important;
+  left: 100%;
+}
+
+*/
