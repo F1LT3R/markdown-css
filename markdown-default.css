@@ -160,9 +160,9 @@ pre:after {
 
 
 
-article>*:not(div):hover{background-color: #171717;background: #171717;position: relative;}
+article>*:not(div):hover{background-color: #191919;background: #191919;position: relative;}
 article>*:not(div):hover:before,
-article>*:not(div):hover:after {content: "";position: absolute;background-color: #171717;background: #171717;top: 0;bottom: 0;width: 9999px;} 
+article>*:not(div):hover:after {content: "";position: absolute;background-color: #191919;background: #171717;top: 0;bottom: 0;width: 9999px;} 
 article>*:not(div):hover:before{right: 100%;}
 article>*:not(div):hover:after{left: 100%;}
 
@@ -170,27 +170,27 @@ article>*:not(div):hover:after{left: 100%;}
 
 
 pre:hover{
-  background-color: #222!important;
-  background: #222!important;
+  background-color: #191919!important;
+  background: #191919!important;
   /*transition:.25s;*/
 }
 pre:hover:before, pre:hover:after {
   content: "";
   position: absolute;
-  background-color:  #222!important;
-  background: #222!important;
+  background-color:  #191919!important;
+  background: #191919!important;
   top: 0;
   bottom: 0;
   width: 9999px;
   /*transition:.25s;*/
 } 
 pre:hover:before {
-  background: #222!important;
+  background: #191919!important;
   right: 100%; 
   /*transition:.25s;*/
 }
 pre:hover:after {
-  background: #222!important;
+  background: #191919!important;
   left: 100%;
   /*transition:.25s;*/
 }
