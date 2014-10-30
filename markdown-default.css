@@ -244,6 +244,13 @@ tr:nth-child(even):hover{background:#3A3A3A;}
 
 
 
+/* Images */
+
+article > img {
+  maxwidth:46.5ch;
+}
+
+
 
 
 /* MATHJAX */
