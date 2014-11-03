@@ -1,10 +1,11 @@
+
 /*NIGHTTIME*/
 @background: #131313;
 @dominant: #AA0;
 @foreground: @background + #AAA;
 @headerBackground:@background - #222;
-@backgroundPara: @background + #151515;
 @headerForeground: @foreground;
+@backgroundPara: @background + #151515;
 @codeBackground: @background+(@dominant/8);
 @codeForeground: @foreground + #AAA;
 @links: @dominant + #777;
@@ -23,12 +24,6 @@
 @links: @dominant - #444;
 @fontWeight:300;
 @strong:@foreground - #111;
-
-
-column{
-  -webkit-columns:2;
-  border:1px solid red;
-}
 
 /* FONT IMPORTS */
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,600,300italic,600italic);
@@ -113,11 +108,10 @@ article>ul, article>ol{
 
 /* HEADINGS */
 
-
 h1,h2,h3,h4,h5,h6{
   font-family:'Josefin Slab', serif;
   font-weight: 100;
-  color:@foreground+#222;
+  color:@foreground+#111;
   margin-top:3ch;
   margin-bottom:2ch;
 }
@@ -126,10 +120,11 @@ h1{
  /*-webkit-font-smoothing: antialiased;*/
   color:@headerForeground;
   background-color: @headerBackground;
-  font-size:36pt;
   position: relative;
   padding:2ch 1ch 1ch 0;
   margin-top: 0ch;
+  font-size:36pt;
+  line-height: 36pt
 }
 h1:before, h1:after {background: @headerBackground; content: "";position: absolute;top: 0;bottom: 0;width: 9999px;} 
 h1:before {right: 100%; }
@@ -251,16 +246,20 @@ blockquote{
   font-weight:300;
   color:@foreground;
   border-left: 1ch desaturate(@dominant, 70%) solid;
-  padding-left:1ch;
-  margin-bottom: 2ch;
+  padding:1ch 1ch 0ch 1.5ch;
+  margin-bottom: 3ch;
   background: @backgroundPara!important;
 }
+blockquote > *:last-child {padding-bottom:1ch!important;}
+blockquote > ul{padding-left:1.5ch;}
+blockquote > ol{padding-left:2ch;}
 
-blockquote:hover{
+
+// blockquote:hover{
   /*background-color: #0A0A0A!important;*/
   /*background: #0A0A0A!important;*/
   /*border-left: 1ch #555 solid;*/
-}
+// }
 
 
 
