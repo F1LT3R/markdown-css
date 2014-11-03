@@ -1,17 +1,15 @@
-
 /*DAYTIME*/
-// @background: #fff;
-// @dominant: #0AF;
-// @foreground: @background - #CCC;
-// @headerBackground:@background*(@dominant/500);
-// @backgroundPara: @background - #151515;
-// @headerForeground:@background;
-// @codeBackground: @foreground + desaturate((@dominant/8),80%);
-// @codeForeground: @foreground + #AAA;
-// @links: @dominant - #444;
-// @fontWeight:300;
-// @strong:@foreground - #111;
-
+@background: #fff;
+@dominant: #0AF;
+@foreground: @background - #CCC;
+@headerBackground:@background*(@dominant/500);
+@backgroundPara: @background - #151515;
+@headerForeground:@background;
+@codeBackground: @foreground + desaturate((@dominant/8),80%);
+@codeForeground: @foreground + #AAA;
+@links: @dominant - #444;
+@fontWeight:300;
+@strong:@foreground - #111;
 
 /*NIGHTTIME*/
 @background: #131313;
@@ -20,11 +18,13 @@
 @headerBackground:@background - #222;
 @headerForeground: @foreground;
 @backgroundPara: @background + #151515;
-@codeBackground: @background+(@dominant/8);
+@codeBackground: @background - #222;
 @codeForeground: @foreground + #AAA;
 @links: @dominant + #777;
 @fontWeight:300;
 @strong:@foreground+#111;
+
+
 
 
 /* FONT IMPORTS */
@@ -126,7 +126,8 @@ h1{
   padding:2ch 1ch 1ch 0;
   margin-top: 0ch;
   font-size:36pt;
-  line-height: 36pt
+  line-height: 36pt;
+  font-weight:300;
 }
 h1:before, h1:after {background: @headerBackground; content: "";position: absolute;top: 0;bottom: 0;width: 9999px;} 
 h1:before {right: 100%; }
@@ -136,7 +137,9 @@ h1:after {left: 100%;}
 
 
 h1+p{
-  /*padding:0 2ch;*/
+  // padding:0 2ch;
+  // font-weight:600!important;
+  color:@foreground;
 }
 
 h2{font-size:28pt;font-weight:bold;}
@@ -255,6 +258,7 @@ blockquote{
 blockquote > *:last-child {padding-bottom:1ch!important;}
 blockquote > ul{padding-left:1.5ch;}
 blockquote > ol{padding-left:2ch;}
+blockquote a{background:transparent!important;}
 
 
 // blockquote:hover{
