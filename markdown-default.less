@@ -41,6 +41,7 @@
   /*-webkit-font-smoothing: antialiased;*/
 }
 
+
 html, body{
    overflow-x: hidden;
 }
@@ -259,7 +260,21 @@ blockquote > *:last-child {padding-bottom:1ch!important;}
 blockquote > ul{padding-left:1.5ch;}
 blockquote > ol{padding-left:2ch;}
 blockquote a{background:transparent!important;}
-
+blockquote > p > img {width:100%;}
+blockquote > p > author:before{
+  content:"— "
+}
+blockquote > p > author{
+  margin-top:1ch;
+  display:block;
+  // border:1px solid orange;
+}
+blockquote > p > source{
+  // border:1px solid red;
+  display:block;
+  margin-top:-2ch;
+  padding-left:2ch;
+}
 
 // blockquote:hover{
   /*background-color: #0A0A0A!important;*/
@@ -356,4 +371,25 @@ iframe{
   height:600px;
   margin-bottom:3ch;
 }
+
+
+
+aside{
+  // -webkit-column-width: 46.5ch;
+  -webkit-columns: 2;
+  -webkit-column-gap: 4ch;
+  margin-bottom:3ch;
+  -webkit-column-rule: .25ch outset fade(desaturate(@dominant, 50%), 25%);
+}
+
+
+
+
+
+
+
+
+
+
+
 
