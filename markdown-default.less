@@ -1,4 +1,5 @@
 
+
 /*NIGHTTIME*/
 @background: #131313;
 @dominant: #AA0;
@@ -11,6 +12,7 @@
 @links: @dominant + #777;
 @fontWeight:300;
 @strong:@foreground+#111;
+@imgBorder: transparent;
 
 /*DAYTIME*/
 @background: #fff;
@@ -19,11 +21,12 @@
 @headerBackground:@background*(@dominant/500);
 @backgroundPara: @background - #151515;
 @headerForeground:@background;
-@codeBackground: @foreground + desaturate((@dominant/8),80%);
+@codeBackground: desaturate( @dominant/8,95%);
 @codeForeground: @foreground + #AAA;
 @links: @dominant - #444;
 @fontWeight:300;
 @strong:@foreground - #111;
+@imgBorder:@foreground+#888;
 
 
 
@@ -53,6 +56,7 @@ body{
   line-height:24pt;
   background:@background;
   color:@foreground;
+
 }
 ::selection{
   background:@dominant;
@@ -83,8 +87,6 @@ h1+p{
   color:@foreground;
   /*-webkit-font-smoothing: antialiased;*/
 }
-
-
 
 
 
@@ -124,7 +126,7 @@ h1{
   color:@headerForeground;
   background-color: @headerBackground;
   position: relative;
-  padding:2ch 1ch 1ch 0;
+  padding:1ch 0 1ch 0;
   margin-top: 0ch;
   font-size:36pt;
   line-height: 36pt;
@@ -134,12 +136,16 @@ h1:before, h1:after {background: @headerBackground; content: "";position: absolu
 h1:before {right: 100%; }
 h1:after {left: 100%;}
 
+h1:first-child{
+  padding-top:2ch;
+}
+
 
 
 
 h1+p{
-  // padding:0 2ch;
-  // font-weight:600!important;
+  padding:0 2ch;
+  font-weight:600!important;
   color:@foreground;
 }
 
@@ -151,7 +157,7 @@ h6{font-size:14pt;font-weight:bold;}
 
 
 
-/* LINKS */
+/* LINKS  */
 
 a{
   color:@links;
@@ -171,26 +177,6 @@ a:hover,a:focus{
 
 
 
-/*article>h2+p{*/
-
-
-
-
-
-
-
-
-/* HOVER ALL: Screen-Wide Background */
-
-/*article>*:not(div):not(table):hover{background-color: #222;background: #222;position: relative;}
-article>*:not(div):not(table):hover:before,
-article>*:not(div):not(table):hover:after {content: "";position: absolute;background-color: #222;background: #222;top: 0;bottom: 0;width: 9999px;} 
-article>*:not(div):not(table):hover:before{right: 100%;}
-article>*:not(div):not(table):hover:after{left: 100%;}
-*/
-
-
-
 /* PRE */
 
 pre{
@@ -198,7 +184,7 @@ pre{
   font-weight: normal!important;
   font-size: 14pt;
   line-height: 18pt;
-  padding:1ch 2ch;
+  padding:4ch 0 8ch 0;
   color:@codeForeground!important;
   margin-bottom: 6ch;
   background-color: @codeBackground!important;
@@ -214,36 +200,6 @@ pre{
       content: "";position: absolute;top: 0;bottom: 0;width: 9999px;}
     pre:before {right: 100%;}
     pre:after {left: 100%;}
-
-
-
-    /* PRE: Screen-Wide Background Hover */
-    /*pre:hover{
-      background-color: #222!important;
-      background: #222!important;
-    }
-    pre:hover:before,
-    pre:hover:after {
-      content: "";
-      position: absolute;
-      background-color:  #222!important;
-      background: #222!important;
-      top: 0;
-      bottom: 0;
-      width: 9999px;
-    } 
-    pre:hover:before {
-      background: #222!important;
-      right: 100%; 
-    }
-    pre:hover:after {
-      background: #222!important;
-      left: 100%;
-    }*/
-
-
-
-
 
 
 /* BLOCKQUOTE */
@@ -276,15 +232,6 @@ blockquote > p > source{
   padding-left:2ch;
 }
 
-// blockquote:hover{
-  /*background-color: #0A0A0A!important;*/
-  /*background: #0A0A0A!important;*/
-  /*border-left: 1ch #555 solid;*/
-// }
-
-
-
-
 /* TABLE */
 
 article>table{
@@ -307,9 +254,6 @@ td{
 }
 tr:nth-child(odd){ background:@backgroundPara - #111;}
 tr:nth-child(even){background:@backgroundPara}
-/*tr:nth-child(odd):hover{background:#333;}
-tr:nth-child(even):hover{background:#3A3A3A;}
-*/
 
 
 
@@ -318,14 +262,13 @@ tr:nth-child(even):hover{background:#3A3A3A;}
 article > p > img {
   /*max-width:46.5ch;*/
   width:46.5ch;
+  border:1px solid @imgBorder;
+  box-shadow:0px 4px 16px rgba(0,0,0,.5);
 }
 article > p > a > img {
   /*max-width:46.5ch;*/
   width:46.5ch;
 }
-
-
-/*.ascciify{background:black;-webkit-font-smoothing: antialiased;font-size:12px;font-family:"Source Code Pro";letter-spacing:-3.5px;line-height:5px;}.ascciify *{margin:0;padding:0}*/
 
 
 
@@ -337,30 +280,6 @@ span.MathJax{
   padding:1ch;
   /*background:#191919!important;*/
 }
-/*span.MathJax:hover{
-  background-color: #222!important;
-  background: #222!important;
-}
-span.MathJax:hover:before,
-span.MathJax:hover:after {
-  content: "";
-  position: absolute;
-  background-color:  #222!important;
-  background: #222!important;
-  top: 0;
-  bottom: 0;
-  width: 9999px;
-} 
-span.MathJax:hover:before {
-  background: #222!important;
-  right: 100%; 
-}
-span.MathJax:hover:after {
-  background: #222!important;
-  left: 100%;
-}
-
-*/
 
 
 
